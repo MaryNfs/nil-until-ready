@@ -1,25 +1,27 @@
 package happy_number
 
-var check = make(map[int]int, 0)
+// this is the ideal solution
 
 func isHappy(n int) bool {
-	if n == 1 {
-		check = make(map[int]int)
-		return true
+	check := make(map[int]int, 0)
+	x := func(n int) int {
+		numArr := NumToArrayMath(n)
+		res := 0
+		for i := 0; i < len(numArr); i++ {
+			res += numArr[i] * numArr[i]
+		}
+		return res
 	}
-	numArr := NumToArrayMath(n)
-	res := 0
-	for i := 0; i < len(numArr); i++ {
-		res += numArr[i] * numArr[i]
+	for n != 1 {
+		n = x(n)
+		_, ok := check[n]
+		if ok != true {
+			check[n] = 1
+		} else {
+			return false
+		}
 	}
-	_, ok := check[res]
-	if ok != true {
-		check[res] = 1
-		return isHappy(res)
-	} else {
-		check = make(map[int]int)
-		return false
-	}
+	return true
 
 }
 
@@ -41,3 +43,4 @@ func NumToArrayMath(num int) []int {
 
 	return arr
 }
+
