@@ -16,7 +16,7 @@ func TestIsHappy(t *testing.T) {
 	for _,test := range tests{
 		res := isHappy(test.input)
 		if res != test.expected {
-			t.Errorf("isPalindrome(%v) = %v; expected %v", test.input, res, test.expected)
+			t.Errorf("isHappy(%v) = %v; expected %v", test.input, res, test.expected)
 		}
 	}
 }
