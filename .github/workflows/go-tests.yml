@@ -13,6 +13,9 @@ permissions:
 jobs:
   tests:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Go
     steps:
       - uses: actions/checkout@v4
       - name: Setup Go 1.24
@@ -23,7 +26,8 @@ jobs:
         run: go version
       - name: Code Lint
         uses: golangci/golangci-lint-action@1e7e51e771db61008b38414a730f564565cf7c20
-        working-directory: Go/
+        with:
+          working-directory: Go
       - name: Build
         run: go build -v ./...
       - name: Test
