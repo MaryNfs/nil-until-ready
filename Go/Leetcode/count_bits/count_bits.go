@@ -1,4 +1,4 @@
-package countBits
+package count_bits
 
 // Ugly
 func countBits(n int) []int {
