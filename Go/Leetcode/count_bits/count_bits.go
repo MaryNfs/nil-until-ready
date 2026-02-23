@@ -1,7 +1,5 @@
 package count_bits
 
-import "fmt"
-
 // Ugly
 // func countBits(n int) []int {
 // 	res := make([]int, 0)
@@ -35,7 +33,7 @@ func countBits(n int) []int {
 	dp := make([]int, n+1)
 	off := 1
 	for i := 1; i < n+1; i++ {
-		if off * 2 == i{
+		if off*2 == i {
 			off = i
 		}
 		dp[i] = 1 + dp[i-off]
