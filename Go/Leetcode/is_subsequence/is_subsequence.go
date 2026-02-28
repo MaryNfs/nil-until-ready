@@ -1,6 +1,6 @@
 package is_subsequence
 
 // TODO: implement solution
-func Solve() {
-	// implement
+func isSubsequence(s string, t string) bool {
+    
 }
