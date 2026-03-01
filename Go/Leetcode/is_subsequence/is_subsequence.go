@@ -1,7 +1,6 @@
 package is_subsequence
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -24,4 +23,3 @@ func isSubsequence(s string, t string) bool {
 	}
 	return false
 }
-
