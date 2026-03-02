@@ -2,7 +2,7 @@ package good_node
 
 import "testing"
 
-func TesGoodNodes(t *testing.T) {
+func TestGoodNodes(t *testing.T) {
 	cases := []struct {
 		root []any
 		out  int
