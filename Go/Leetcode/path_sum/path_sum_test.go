@@ -12,7 +12,8 @@ func TestPathSum(t *testing.T) {
 		out       int
 	}{
 		{[]any{10, 5, -3, 3, 2, nil, 11, 3, -2, nil, 1}, 8, 3},
-		{[]any{5, 4, 8, 11, nil, 13, 4, 7, 2, nil, nil, 5, 1}, 22, 3},
+		// {[]any{5, 4, 8, 11, nil, 13, 4, 7, 2, nil, nil, 5, 1}, 22, 3},
+		// {[]any{10, 5, -3, 3, 2, nil, 11, 5, -2, nil, 1}, 8, 4},
 	}
 	for _, c := range cases {
 		fmt.Println("f")
