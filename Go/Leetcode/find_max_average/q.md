@@ -1,0 +1,12 @@
+# find_max_average
+
+## Problem
+
+Paste the problem description here.
+
+## Examples
+
+## Notes
+- Constraints:
+- Edge cases:
+- Complexity:
