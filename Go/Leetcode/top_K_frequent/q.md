@@ -1,12 +1,24 @@
-# top_K_frequent
+# 347. Top K Frequent Elements
 
 ## Problem
-
-Paste the problem description here.
+Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
 
 ## Examples
+Example 1:
+Input: nums = [1,1,1,2,2,3], k = 2
+Output: [1,2]
+
+Example 2:
+Input: nums = [1], k = 1
+Output: [1]
+
+Example 3:
+Input: nums = [1,2,1,2,1,2,3,1,3,2], k = 2
+Output: [1,2]
 
 ## Notes
 - Constraints:
-- Edge cases:
-- Complexity:
+1 <= nums.length <= 105
+-104 <= nums[i] <= 104
+k is in the range [1, the number of unique elements in the array].
+It is guaranteed that the answer is unique.
