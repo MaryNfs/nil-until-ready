@@ -28,3 +28,21 @@ func productExceptSelf(nums []int) []int {
     }
     return res
 }
+
+// Second solution, less memory, less runTime
+func productExceptSelf2(nums []int) []int {
+    res := make([]int,len(nums))
+    pre :=1
+    res[0]=1
+    for i:=0;i<len(nums)-1;i++{
+        pre *= nums[i]
+        res[i+1]=pre
+    }
+    post:=1
+    for i:=len(nums)-1;i>=0;i--{
+        res[i]=post*res[i]
+        post *=nums[i]        
+    }
+    
+    return res
+}
