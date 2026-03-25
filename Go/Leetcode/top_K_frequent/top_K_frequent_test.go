@@ -18,6 +18,8 @@ func TestTopKFrequent(t *testing.T) {
 
 	for _, c := range cases {
 		res := topKFrequent(c.nums, c.k)
+		slices.Sort(res)
+		slices.Sort(c.out)
 		if !slices.Equal(res, c.out) {
 			t.Errorf("topKFrequent(%v,%v)=%v, but it should be %v", c.nums, c.k, res, c.out)
 		}
