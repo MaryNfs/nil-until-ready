@@ -16,7 +16,6 @@ func TestPathSum(t *testing.T) {
 		{[]any{10, 5, -3, 3, 2, nil, 11, 5, -2, nil, 1}, 8, 4},
 	}
 	for _, c := range cases {
-		fmt.Println("f")
 		root := buildTreeLevelOrder(c.root)
 		res := pathSum(root, c.targetSum)
 		if res != c.out {
