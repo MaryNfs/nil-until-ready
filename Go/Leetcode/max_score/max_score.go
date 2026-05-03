@@ -60,6 +60,7 @@ func (h *minHeap) Pop() any {
 
 
 // python solution
+// ref https://www.youtube.com/watch?v=t1keKit-7Lg
 /*
 class Solution:
     def maxScore(self, nums1: List[int], nums2: List[int], k: int) -> int:
